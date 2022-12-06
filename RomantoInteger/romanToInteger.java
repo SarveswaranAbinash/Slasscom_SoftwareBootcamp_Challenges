@@ -64,14 +64,8 @@ public static void main (String [] args)
     System.out.println("Enter roman Character :");
 
     String input = sc.nextLine();
-    if(input.equals("IIII") || input.equals("XXXX")) 
-    {
-        System.out.println("error");
-    }
-    else
-    {
-
+   
    System.out.println( "Numberals : " +   roman_numeralToInteger(input));
-    }
+    
 }
 }
