@@ -145,14 +145,25 @@ public class romanToInteger {
 
 	public static void main(String[] args) {
 
-		System.out.println("Welcome to Roman to Integer Converter Menu:");
-		System.out.println("Please Select The test case to continue:");
 		Scanner sc = new Scanner(System.in);
-		System.out.println("Enter roman Character :");
-		String input = sc.nextLine();
-		System.out.println("Numberals : " + roman_numeralToInteger(input));
-		System.out.println("CASE 2 : " + romanToInt(input));
-		roman_character_int(input);
+		System.out.println("Welcome to Roman to Integer Converter Menu:");
+		System.out.println("Menu : \n 1) Test case 1 \n 2) Test case 2 \n 3) Test case 3");
+		System.out.println("Please Select The test case to continue:");
+		int character = sc.nextInt();
+		switch (character) {
+			case 1:
+				System.out.println("Enter roman Character :");
+				String value = sc.next();
+				System.out.println("Numberals : " + roman_numeralToInteger(value));
+				break;
+
+			case 2:
+				System.out.println("Enter roman Character :");
+				String input = sc.next();
+				System.out.println("CASE 2 : " + romanToInt(input));
+				roman_character_int(input);
+				break;
+		}
 
 	}
 }
