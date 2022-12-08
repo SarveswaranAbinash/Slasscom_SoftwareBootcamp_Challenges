@@ -69,12 +69,12 @@ public class romanToInteger {
 		return numbers;
 	}
 
-	public static int romanToInt(String s) {
+	public static int romanToInt(String Roman_char) {
 		int total = 0;
-		for (int i = 0; i < s.length(); i++) {
-			int s1 = value(s.charAt(i));
-			if (i + 1 < s.length()) {
-				int s2 = value(s.charAt(i + 1));
+		for (int i = 0; i < Roman_char.length(); i++) {
+			int s1 = value(Roman_char.charAt(i));
+			if (i + 1 < Roman_char.length()) {
+				int s2 = value(Roman_char.charAt(i + 1));
 				if (s1 >= s2) {
 					total = total + s1;
 				} else {
@@ -87,19 +87,55 @@ public class romanToInteger {
 		return total;
 	}
 
-	public static int roman_character_int(String string) {
+	public static int romant(String Roman) {
+		int result = 0;
+		String Integer_value = Roman;
 
-		int length = string.length();
+		for (int i = 0; i < Roman.length() - 1; i++) {
+			int value1 = getValue(Roman.charAt(i));
+			int value2 = getValue(Roman.charAt(i + 1));
 
-		string = string + " ";
+			if (value1 < value2) {
+				result += (value2 - value1);
+
+				Integer_value = Integer_value.replace(Roman.substring(i, i + 2), "");
+			}
+		}
+
+		for (int i = 0; i < Integer_value.length(); i++)
+			result += getValue(Integer_value.charAt(i));
+
+		return result;
+	}
+
+	public static int getValue(char roman_character) {
+		char[] roman_characters = { 'I', 'V', 'X', 'L', 'C', 'D', 'M' };
+		int[] integer_values = { 1, 5, 10, 50, 100, 500, 1000 };
+		int result = 0;
+
+		for (int i = 0; i < roman_characters.length; i++) {
+			if (roman_character == roman_characters[i]) {
+				result = integer_values[i];
+				break;
+			}
+		}
+
+		return result;
+	}
+
+	public static int roman_character_int(String Integer) {
+
+		int length = Integer.length();
+
+		Integer = Integer + " ";
 		int result = 0;
 		for (int i = 0; i < length; i++) {
-			char ch = string.charAt(i);
-			char next_char = string.charAt(i + 1);
+			char roman_Converter = Integer.charAt(i);
+			char next_char = Integer.charAt(i + 1);
 
-			if (ch == 'M') {
+			if (roman_Converter == 'M') {
 				result += 1000;
-			} else if (ch == 'C') {
+			} else if (roman_Converter == 'C') {
 				if (next_char == 'M') {
 					result += 900;
 					i++;
@@ -109,9 +145,9 @@ public class romanToInteger {
 				} else {
 					result += 100;
 				}
-			} else if (ch == 'D') {
+			} else if (roman_Converter == 'D') {
 				result += 500;
-			} else if (ch == 'X') {
+			} else if (roman_Converter == 'X') {
 				if (next_char == 'C') {
 					result += 90;
 					i++;
@@ -121,9 +157,9 @@ public class romanToInteger {
 				} else {
 					result += 10;
 				}
-			} else if (ch == 'L') {
+			} else if (roman_Converter == 'L') {
 				result += 50;
-			} else if (ch == 'I') {
+			} else if (roman_Converter == 'I') {
 				if (next_char == 'X') {
 					result += 9;
 					i++;
@@ -137,7 +173,7 @@ public class romanToInteger {
 				result += 5;
 			}
 		}
-		System.out.println("\nRoman Number: " + string);
+		System.out.println("\nRoman Number: " + Integer);
 		System.out.println("Equivalent Integer: " + result + "\n");
 
 		return result;
@@ -147,7 +183,7 @@ public class romanToInteger {
 
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Welcome to Roman to Integer Converter Menu:");
-		System.out.println("Menu : \n 1) Test case 1 \n 2) Test case 2 \n 3) Test case 3");
+		System.out.println("Menu : \n 1) Solution 1 \n 2) Solution 2 \n 3) Solution 3 \n 4) Solution 4");
 		System.out.println("Please Select The test case to continue:");
 		int character = sc.nextInt();
 		switch (character) {
@@ -161,9 +197,25 @@ public class romanToInteger {
 				System.out.println("Enter roman Character :");
 				String input = sc.next();
 				System.out.println("CASE 2 : " + romanToInt(input));
-				roman_character_int(input);
 				break;
+
+			case 3:
+				System.out.println("Enter roman character");
+				String input2 = sc.next();
+				roman_character_int(input2);
+				break;
+
+			case 4:
+				System.out.println("Enter roman character");
+				String input3 = sc.next();
+				System.out.println("answer : " + romant(input3));
+				break;
+
+			default:
+				System.out.println("Enter proper input");
+
 		}
 
 	}
 }
+
