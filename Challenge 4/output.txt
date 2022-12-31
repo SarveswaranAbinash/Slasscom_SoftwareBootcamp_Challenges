@@ -1,0 +1,65 @@
+English Student Grade Summary
+---------------------
+
+
+ENGLISH CLASS
+
+
+Student Final Final Letter
+Name    Exam  Avg   Grade
+Three  Four 90.0 84.9 B
+
+Number of students who received each grade:
+A: 0
+B: 1
+C: 0
+D: 0
+F: 0
+
+Science Student Grade Summary
+---------------------
+
+
+Science CLASS
+
+
+Student Final Final Letter
+Name    Exam  Avg   Grade
+Five  Six 88.0 80.29999999999998 B
+Nine  Ten 34.0 34.0 F
+
+Number of students who received each grade:
+A: 0
+B: 1
+C: 0
+D: 0
+F: 1
+
+Maths Student Grade Summary
+---------------------
+
+
+Math CLASS
+
+
+Student Final Final Letter
+Name Exam Avg Grade
+One  Two 93.0 94.98 A
+Seven  Eight 90.0 90.0 A
+Eleven  Twelve 10.0 30.4 F
+
+Number of students who received each grade:
+A: 2
+B: 0
+C: 0
+D: 0
+F: 1
+
+---------------------
+Overall Student Summary 
+---------------------
+Overall A grade holders - 2
+Overall B grade holders - 2
+Overall C grade holders - 0
+Overall D grade holders - 0
+Overall F grade holders - 2

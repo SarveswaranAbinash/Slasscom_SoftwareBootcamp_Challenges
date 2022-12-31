@@ -1,0 +1,13 @@
+6
+One, Two
+Math 90 86 80 95 100 99 96 93
+Three, Four
+English 88 75 90
+Five, Six
+Science 95 76 72 88
+Seven, Eight
+Math 90 90 90 90 90 90 90 90
+Nine, Ten
+Science 34 34 34 34
+Eleven, Twelve
+Math 50 50 50 40 40 40 40 10  
