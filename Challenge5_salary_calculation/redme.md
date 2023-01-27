@@ -12,6 +12,8 @@ Another way to create a new thread in Java is to implement the Runnable interfac
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 What is this program?
+
+
 This program is a simple example of using threads in Java to calculate the final salary of an employee, including allowances and EPF (Employees Provident Fund) contributions.
 It demonstrates how multiple threads can be used to perform different calculations concurrently and how the results can be combined to obtain the final salary.
 
